@@ -1,0 +1,26 @@
+name: Chester
+version: 0.1.2
+description: Player Chest Storage
+author: Cryptobyte
+website: https://github.com/Cryptobyte
+main: org.lawlsec.Chester.Chester
+database: true
+commands:
+  chest:
+    description: Open a Chest
+    usage: /chest <number>
+  chester:
+    description: Chester Admin
+    usage: /chester <command>
+permissions:
+   chester.*:
+     description: Gives access to all Chester commands
+     children:
+       chester.unlimited: true
+       chester.admin: true
+   chester.unlimited:
+        description: Gives access to unlimited chests
+        default: op
+   chester.admin:
+        description: Gives access to Chester admin functions
+        default: op
